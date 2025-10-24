@@ -1,0 +1,482 @@
+/* Styles généraux */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* Header avec bandeau foncé */
+header {
+  /*background: #222;*/
+  color: #fff;
+  text-align: center;
+  padding: 0/*1.8rem 0 1.2rem 0;*/
+}
+
+/* Titre principal */
+header h1 {
+  margin: 0;
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Navigation sous le bandeau foncé */
+nav {
+  background: #fff;
+  color: #222;
+  padding: 0.6rem 0;
+  font-weight: bold;
+  border-bottom: 1.5px solid #eee;
+  text-align: center;
+}
+
+nav a {
+  color: #222;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+nav a:hover {
+  font-size: 1.2em;
+}
+
+/* Titre de section centré */
+h2 {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Paragraphe accueil mis en valeur */
+.accueil-paragraphe {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.2rem 1.5rem;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  color: #222;
+  text-align: center;
+}
+
+/* Tableau standard */
+table {
+  border-collapse: collapse;
+  margin: 1.5rem auto;
+  background: #fff;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-width: 350px;
+  max-width: 100%;
+}
+
+/* Cellules de tableaux */
+th, td {
+  border: 1px solid #222;
+  padding: 0.5em 0.9em;
+  text-align: center;
+}
+
+/* En-tête générique */
+th {
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Tableaux spécifiques horaires/planning */
+.horaire-muscu, .cours-collectifs {
+  min-width: 500px;
+  font-size: 1.05rem;
+  margin: 2rem auto;
+}
+
+/* En-tête des tableaux horaires/planning */
+.horaire-muscu th, .cours-collectifs th {
+  min-width: 90px;
+  background: #fff;
+  font-weight: bold;
+  font-size: 1.13em;
+  letter-spacing: 1px;
+  border: 2px solid #222;
+}
+
+.horaire-muscu td, .cours-collectifs td {
+  border: 2px solid #222;
+}
+
+.horaire-muscu td[style*="background: #000;"] {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Petits textes dans les cours collectifs */
+.cours-collectifs td small {
+  font-size: 0.85em;
+  color: #444;
+}
+
+/* Footer blanc et centré */
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Bannière si besoin */
+.banniere {
+  position: relative;
+}
+.banniere img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.banniere .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+.texte-sur-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+  z-index: 2;
+}
+.texte-sur-image h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.texte-sur-image p {
+  font-size: 1.2rem;
+}
+.bandeau-titre {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.8rem 0 1.2rem 0;
+}
+
+.bandeau-titre h1 {
+  margin: 0;
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.ligne-discrete {
+  border: none;
+  border-top: 0.5px solid #000;  /* gris très léger */
+  margin: 2.5rem auto 2.5rem auto;
+  width: 70%;
+}
+.liens-pdf {
+  text-align: center;
+  margin: 2.5rem auto 2rem auto;
+}
+
+.liens-pdf ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0 0;
+}
+
+.liens-pdf li {
+  margin: 0.6rem 0;
+}
+
+.liens-pdf a {
+  color: #00bfff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.liens-pdf a:hover {
+  text-decoration: underline;
+  color: #004c99;
+}
+.plan-adresse {
+  max-width: 650px;
+  margin: 2em auto 2em auto;
+  text-align: center;
+}
+.plan-adresse iframe {
+  box-shadow: 0 2px 18px rgba(0,0,0,0.13);
+  border-radius: 14px;
+}
+
+.contact-bandeau-horizontal {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: #dedede;     /* Gris moyen, bien visible */
+  padding: 2.1em 0 1.4em 0;
+  text-align: center;
+  border-top: 2.5px solid #bbb;
+  border-bottom: 2.5px solid #bbb;
+}
+
+.contact-bandeau-horizontal h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.contact-bandeau-horizontal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-bandeau-horizontal li {
+  display: inline-block;
+  margin: 0 1.6em;
+}
+
+.contact-bandeau-horizontal a {
+  color: #222;
+  font-weight: bold;
+  font-size: 1.14em;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  transition: 
+    color 0.16s,
+    background 0.15s,
+    transform 0.15s;
+  padding: 7px 8px;
+  border-radius: 7px;
+}
+
+.contact-bandeau-horizontal a:hover {
+  color: #fff;
+  background: #222;
+  transform: scale(1.13);
+  text-decoration: none;
+}
+.bandeau-liens-pdf {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: #dedede;
+  padding: 2.1em 0 1.4em 0;
+  text-align: center;
+  border-top: 2.5px solid #bbb;
+  border-bottom: 2.5px solid #bbb;
+  margin-bottom: 2em;
+}
+
+.bandeau-liens-pdf h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+  color: #222;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.bandeau-liens-pdf ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bandeau-liens-pdf li {
+  display: inline-block;
+  margin: 0 1.6em;
+}
+
+.bandeau-liens-pdf a {
+  color: #222;
+  font-weight: bold;
+  font-size: 1.11em;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  transition: color 0.16s, background 0.15s, transform 0.15s;
+  padding: 7px 10px;
+  border-radius: 7px;
+}
+
+.bandeau-liens-pdf a:hover {
+  color: #fff;
+  background: #222;
+  transform: scale(1.13);
+  text-decoration: none;
+}
+
+.equipement-bloc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 2.2rem auto;
+  max-width: 1100px;
+  padding: 1.8rem 2.3rem;
+  background: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.equipement-bloc img {
+  max-width: 330px;
+  width: 36vw;
+  height: auto;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.equipement-texte {
+  flex: 1;
+  font-size: 1.13rem;
+  color: #222;
+  text-align: left;
+}
+
+.equipement-texte h3 {
+  margin-top: 0;
+  color: #222222;
+  font-size: 1.4em;
+  margin-bottom: 0.8em;
+}
+
+/* Pour alterner l’ordre image/texte sur une ligne sur deux */
+.equipement-bloc.inverse {
+  flex-direction: row-reverse;
+  background: #ededed;
+}
+
+/* Responsive mobile : passe tout en colonne sur petit écran */
+@media (max-width: 700px) {
+  .equipement-bloc, .equipement-bloc.inverse {
+    flex-direction: column !important;
+    gap: 1.2rem;
+    padding: 1.2rem 0.7rem;
+    text-align: center;
+  }
+  .equipement-bloc img {
+    width: 100%;
+    max-width: 98vw;
+  }
+  .equipement-texte {
+    text-align: center;
+  }
+}
+.equipe-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  max-width: 540px;
+  margin: 2.2rem auto;
+  padding: 2rem 1.5rem 1.6rem 1.5rem;
+}
+
+.equipe-bloc img {
+  width: 220px;
+  max-width: 98vw;
+  height: auto;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 1.1rem;
+  object-fit: cover;
+}
+
+.equipe-bloc h3 {
+  margin-top: 0;
+  color: #00bfff;
+  font-size: 1.37em;
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+
+.equipe-bloc p {
+  color: #222;
+  font-size: 1.08em;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .equipe-bloc {
+    padding: 1.3rem 0.7rem;
+  }
+  .equipe-bloc img {
+    width: 95vw;
+    max-width: 95vw;
+  }
+}
+
+
+
+
+
+
+/* === Nouvelle grille pour la page Équipement === */
+.equipement-grille {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.equipement-item {
+  background: #f8f8f8;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.equipement-item:hover {
+  transform: scale(1.03);
+}
+
+.equipement-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+}
+
+.equipement-item h3 {
+  color: #222;
+  margin: 0.5rem 0;
+}
+
+.equipement-item p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive : passe à une seule colonne sur petit écran */
+@media (max-width: 750px) {
+  .equipement-grille {
+    grid-template-columns: 1fr;
+  }
+}
+
